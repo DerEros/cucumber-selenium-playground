@@ -25,6 +25,8 @@ dependencies {
 
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.1.2'
     testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
+    testImplementation group: 'com.typesafe', name: 'config', version: '1.4.0'
 }
 
 configurations {

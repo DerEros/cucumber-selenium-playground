@@ -8,11 +8,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import com.example.config.Configuration;
+
 public class Browser {
     private final WebDriverCache webDriverCache;
 
-    public Browser(WebDriverCache webDriverCache) {
+    public Browser(WebDriverCache webDriverCache, Configuration config) {
         this.webDriverCache = webDriverCache;
+        System.out.println(config.getBrowserConfig().getWebdriverExecutable());
     }
 
     @Given("a browser window") 
