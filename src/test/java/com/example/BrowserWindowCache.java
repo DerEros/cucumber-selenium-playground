@@ -68,4 +68,11 @@ public class BrowserWindowCache {
     public void setActiveWindow(WebDriver window) {
         this.activeWindow = window;
     }
+
+    public static void closeAll() {
+        windowsByUser.forEach((username, windowList) ->
+                   windowList.forEach(window -> window.quit()) 
+                );
+        windowsByUser.clear();
+    }
 }

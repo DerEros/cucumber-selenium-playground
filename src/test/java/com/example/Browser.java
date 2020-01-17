@@ -19,4 +19,17 @@ public class Browser {
     public void openBrowser() {
         browserWindowCache.setActiveWindow("foouser");
     }
+
+    @Given("any number of browser windows")
+    public void anyNumberOfWindows() {}
+
+    @When("closing all browser windows")
+    public void closeBrowserWindows() {
+        browserWindowCache.closeAll();
+    }
+
+    @Then("{int} browser windows remain open")
+    public void checkOpenWindows(int number) {
+        //TODO: implement
+    }
 }

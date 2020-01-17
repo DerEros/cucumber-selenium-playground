@@ -21,3 +21,8 @@ Feature: Wikipedia Website
         And refresh page
         Then field "Fachbereich" contains "foobar"
         And field "Fachabteilung" contains "barfoo"
+
+    Scenario: Close all windows
+        Given any number of browser windows
+        When closing all browser windows
+        Then 0 browser windows remain open
