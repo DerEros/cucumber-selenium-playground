@@ -3,14 +3,16 @@ package com.example;
 import io.cucumber.java.en.*;
 
 import com.example.config.ConfigCache;
-import com.example.config.Configuration;
 import com.example.BrowserWindowCache;
 
 public class Browser {
     private final BrowserWindowCache browserWindowCache;
+    private final ConfigCache configCache;
 
-    public Browser(BrowserWindowCache browserWindowCache, ConfigCache configCache) {
+    public Browser(BrowserWindowCache browserWindowCache, 
+            ConfigCache configCache) {
         this.browserWindowCache = browserWindowCache;
+        this.configCache = configCache;
     }
 
     @Given("a browser window") 
