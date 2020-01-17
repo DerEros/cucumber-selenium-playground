@@ -11,6 +11,7 @@ Feature: Wikipedia Website
         When navigating to "https://google.com"
         Then the page title is "Wikipedia"
 
+    @skip
     Scenario: Create new distribution elements if needed
         Given a browser on page "http://foo.bar"
         When navigating to menu item "PT/Status"
